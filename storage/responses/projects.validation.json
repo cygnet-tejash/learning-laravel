@@ -1,0 +1,7 @@
+{
+    "title": ["The title has already been taken."],
+    "end_date": ["Project end date must be greater than project start date."],
+    "estimated_completion_date": [
+        "Project estimated completion date must be greater than project start date."
+    ]
+}
