@@ -84,26 +84,51 @@ Breadcrumbs::for('admin.passport', function ($trail, $id = null) {
     $trail->push('Passport Token', route('admin.passport'));
 });
 
-// Dashboard > User
+// Dashboard > Projects
 Breadcrumbs::for('admin.projects.index', function ($trail, $id = null) {
     $trail->parent('admin.dashboard');
     $trail->push('Projects', route('admin.projects.index'));
 });
 
-// Dashboard > User > Add
+// Dashboard > Projects > Add
 Breadcrumbs::for('admin.projects.create', function ($trail, $id = null) {
     $trail->parent('admin.projects.index');
     $trail->push('Add', route('admin.projects.create'));
 });
 
-// Dashboard > User > edit
+// Dashboard > Projects > edit
 Breadcrumbs::for('admin.projects.edit', function ($trail, $user = null) {
     $trail->parent('admin.projects.index');
     $trail->push('Edit', route('admin.projects.edit', $user));
 });
 
-// Dashboard > User > show
+// Dashboard > Projects > show
 Breadcrumbs::for('admin.projects.show', function ($trail, $user = null) {
     $trail->parent('admin.projects.index');
     $trail->push('Show', route('admin.projects.show', $user));
+});
+
+
+// Dashboard > Tasks
+Breadcrumbs::for('admin.tasks.index', function ($trail, $id = null) {
+    $trail->parent('admin.dashboard');
+    $trail->push('Tasks', route('admin.tasks.index'));
+});
+
+// Dashboard > Tasks > Add
+Breadcrumbs::for('admin.tasks.create', function ($trail, $id = null) {
+    $trail->parent('admin.tasks.index');
+    $trail->push('Add', route('admin.tasks.create'));
+});
+
+// Dashboard > Tasks > edit
+Breadcrumbs::for('admin.tasks.edit', function ($trail, $user = null) {
+    $trail->parent('admin.tasks.index');
+    $trail->push('Edit', route('admin.tasks.edit', $user));
+});
+
+// Dashboard > Tasks > show
+Breadcrumbs::for('admin.tasks.show', function ($trail, $user = null) {
+    $trail->parent('admin.tasks.index');
+    $trail->push('Show', route('admin.tasks.show', $user));
 });

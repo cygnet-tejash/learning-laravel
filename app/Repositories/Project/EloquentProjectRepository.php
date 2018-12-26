@@ -36,7 +36,7 @@ class EloquentProjectRepository implements ProjectRepository
         return $this->model->orderBy('id', 'desc')->paginate(5);
     }
 
-    public function destroy()
+    public function destroy($slug)
     {
         $this->model->destroy();
     }
@@ -44,5 +44,11 @@ class EloquentProjectRepository implements ProjectRepository
     public function getOne($slug)
     {
         return $this->model->where('slug', $slug)->first();
+    }
+
+    public function list()
+    {
+        $data = $this->model->get();
+        return $data->pluck('title', 'id');
     }
 }

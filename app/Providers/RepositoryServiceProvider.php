@@ -17,6 +17,11 @@ class RepositoryServiceProvider extends ServiceProvider
             \App\Repositories\Project\Contract\ProjectRepository::class,
             \App\Repositories\Project\EloquentProjectRepository::class
         );
+
+        $this->app->bind(
+            \App\Repositories\Task\Contract\TaskRepository::class,
+            \App\Repositories\Task\EloquentTaskRepository::class
+        );
     }
 
     /**

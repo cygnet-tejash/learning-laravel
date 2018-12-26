@@ -24,7 +24,7 @@ class LoginController extends Controller
         ];
  
         if (auth()->attempt($credentials)) {
-            $token = auth()->user()->createToken('RandomToken')->accessToken;
+            $token = auth()->user()->createToken($request->email)->accessToken;
             return response()->json(['token' => $token], 200);
         } else {
             return response()->json(['error' => 'Un Authorised'], 401);
@@ -55,7 +55,7 @@ class LoginController extends Controller
             'password' => bcrypt($request->password)
         ]);
  
-        $token = $user->createToken('RandomToken')->accessToken;
+        $token = $user->createToken($request->email)->accessToken;
  
         return response()->json(['token' => $token], 200);
     }

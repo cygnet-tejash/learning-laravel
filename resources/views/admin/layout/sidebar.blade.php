@@ -52,4 +52,13 @@
         </a>
     </li>
     @endif
+
+    @if(auth()->user()->hasPermissionTo('task-list'))
+    <li class="nav-item @if(strpos(Route::currentRouteName(), 'admin.tasks') !== FALSE) {{ 'active' }}  @endif ">
+        <a class="nav-link" href="{{ route('admin.tasks.index') }}">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+            <span>Tasks</span>
+        </a>
+    </li>
+    @endif
 </ul>

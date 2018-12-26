@@ -11,9 +11,10 @@
 <script src="/admin/vendor/datatables/jquery.dataTables.js"></script>
 <script src="/admin/vendor/datatables/dataTables.bootstrap4.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> --}}
 
 <!-- Custom scripts for all pages-->
-<script src="{{ mix("/admin/js/sb-admin.min.js") }}"></script>
+<script src="{{ mix("/admin/js/sb-admin.min.js") }}"></script>  
 <script src="{{ mix("/admin/js/custom.js") }}"></script>
 
 @yield('after-script')

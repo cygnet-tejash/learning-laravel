@@ -7,7 +7,7 @@ interface ProjectRepository
 
     public function getAllData();
 
-    public function destroy();
+    public function destroy($slug);
 
     public function getOne($slug);
 }

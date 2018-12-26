@@ -26,6 +26,7 @@ Route::group(['prefix' => 'manager', 'namespace' => 'Admin', 'as' => 'admin.', '
     Route::get('/users/delete/image', 'UserController@deleteImage')->name('users.delete.image');
 
     Route::resource('projects', 'ProjectController');
+    Route::resource('tasks', 'TaskController');
     
     Route::get('/passport', 'PassportTokenController@index')->name('passport');
 });

@@ -383,3 +383,10 @@ body.sidebar-toggled footer.sticky-footer {
   }
 }
 
+.swal-footer {
+  margin-top: 32px;
+  border-top: 1px solid #E9EEF1;
+  overflow: hidden;
+  text-align: center;
+}
+
